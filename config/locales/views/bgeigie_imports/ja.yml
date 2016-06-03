@@ -1,7 +1,101 @@
 ja:
   bgeigie_imports:
+    states:
+      all: 全て
+      submitted: 提出済み
+      done: 承認済み
+      error: エラー
+      processed: 処理済み
+      unprocessed: 新規
+      approved: 承認済み
+      not_approved: 未承認
+      rejected: 却下
     approval:
       approve: 承認する
+    status:
+      processed: 処理済み
+      awaiting_approval: 承認待ち
+      measurements: 測定値
+    edit:
+      back_to_bgeigie_imports: Back to Import list
+      bgeigie_import: bGeigieデータのインポート
+      measurement: 測定値
+      latitude: 緯度
+      longitude: 経度
+      clicks_per_minute: 1分間の放射線計測数　(CPM)
+      map_displayed_once_file_processed: このファイルの処理が完了次第、マップが表示されます。
+      title_tooltip: タイトル
+      description_tooltip: 説明文
+      credits_tooltip: "データ提出者　(カンマ区切り)"
+      cities_tooltip: "市町村名／地域名 (カンマ区切り)"
+      height_tooltip: "センサーの地面からの高さ (メートル)"
+      orientation_tooltip: センサーの方向付け
+      subtype_tooltip: Was the data collected while on a flight?
+      comment_tooltip: Admin comment
+    index:
+      all: All
+      filter_bgeigie_imports: Filter bGeigie Imports
+      rejected_by: Rejected By
+      everyone: Everyone
+      cities: Cities
+      credits: Credits
+      upload: アップロード
+      bgeigie_imports: bGeigieデータのインポート
+      yours: あなたの測定値
+      no_bgeigie_log_files_have_been_uploaded: アップロードされたbGeigieログファイルはありません
+      file_name: File Name
+      number_of_measurements: "# of Measurements"
+      date_uploaded: Date Uploaded
+    new:
+      upload_a_bgeigie_log_file: Upload a bGeigie log file
+      import_exists: "File '%{file_name}' already exists"
+      link_to_existing_import_html: View it &rarr;
+    show:
+      this_file_is_queued_for_processing: This file is queued for processing.
+      you_can_edit_metadata_while_processing: "While the file is processing, you can edit the metadata for this import."
+      latitude: Latitude
+      longitude: Longitude
+      clicks_per_minute: Clicks per minute
+      back_to_bgeigie_imports: Back to Import list
+      edit_details_status: Edit Details / Status
+      metadata: Metadata
+      map: Map
+      process_log: Process Log
+      send_email: Send Email
+      uploaded_by: Uploaded By
+      filename: Filename
+      number_of_measurements: Number of Measurements
+      number_of_lines: Number of Lines
+      edit_details: Edit Details
+      map_not_generated: The Map for this import hasn't generated yet. It will appear here once the file is processed.
+      submit_for_approval: Submit for Approval
+      title: Title
+      delete_this_import: Delete this Import
+      confirm_delete: Confirm Delete
+      about_to_delete: You are about to delete this log. This action cannot be undone.
+    head:
+      reject: Reject
+      unreject: Unreject
+      approve: Approve
+      fixdrive: Fix Drive
+      process_button: Process
+      download_original_file: Download Original File
+      bgeigie_import: Bgeigie Import
+      reload_to_see_map: "If you don't see the map, please manually reload the page."
+    current_status:
+      edit_metadata: Edit Metadata
+      file_is_processed_add_metadata: "File Processed: Please Add Metadata."
+      explain_adding_metadata: "This import has finished processing, but before you can submit it for approval, please add required metadata."
+      file_ready: This File is Ready for Submission.
+      you_are_all_set: "You're all set. You can now submit this file for approval from a Safecast moderator."
+      submit_for_approval: Submit for Approval
+    progress:
+      progress_uploaded: 1. Uploaded
+      progress_processed: 2. Processed
+      progress_metadata: 3. Metadata Added
+      progress_submitted: 4. Submitted
+      progress_approved: 5. Approved
+      progress_live: 6. Live
     details:
       details: 詳細情報
       title: タイトル
@@ -10,42 +104,26 @@ ja:
       credits: データ提出者
       sensor_height: センサーの地面からの高さ
       sensor_orientation: センサーの方向付け
-    progress:
-      progress: 進歩状況
-      process_file: ファイルを処理する
-      count_lines: "%{count}行"
-      count_found: "%{count}件見つかりました"
-      import_bgeigie_logs: bGeigieログをインポートする
-      none_found: 見つかりませんでした。
-      compute_latlng: 経緯度を計算する
-      approved_by_moderator: モデレーターで承認されました
-      added_to_safecast_database: Safecast データベースに登録されました。
-    status:
-      processed: 処理済み
-      awaiting_approval: 承認待ち
-      download_original_file: 元のファイルをダウンロードする
-      measurements: 測定値
-      edit_details_status:
-    edit:
-      this_file_is_queued_for_processing: このファイルの処理を受け付けました。
-      bgeigie_import: bGeigieデータのインポート
-      title_optional: タイトル　(任意項目）
-      description_optional: 説明文　（任意項目）
-      credits_csv: "データ提出者　(カンマ区切り, 任意項目)"
-      cities_csv: "市町村名／地域名 (カンマ区切り, 任意項目)"
-      sensor_height_optional: "センサーの地面からの高さ (メートル, 任意項目)"
-      sensor_orientation_optional: センサーの方向付け (任意項目)
-      back_to_bgeigie_imports:
-      measurement: 測定値
-      latitude: 緯度
-      longitude: 経度
-      clicks_per_minute: 1分間の放射線計測数　(CPM)
-      map_displayed_once_file_processed: このファイルの処理が完了次第、マップが表示されます。
-    index:
-      upload: アップロード
-      bgeigie_imports: bGeigieデータのインポート
-      yours: あなたの測定値
-      no_bgeigie_log_files_have_been_uploaded: アップロードされたbGeigieログファイルはありません
-      file_name: 
-      number_of_measurements:
-      date_uploaded:
+      sensor_subtype: Subtype
+    send_email:
+      email_body: Email Body
+      send_email: Send Email
+    process_log:
+      progress: Progress
+      process_file: Process file
+      count_lines: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+        one: 1 line
+        other: "%{count} lines"
+      count_found: "%{count} found"
+      import_bgeigie_logs: Import bGeigie logs
+      none_found: none found
+      compute_latlng: "Compute latitudes &amp; longitudes"
+      approved_by_moderator: Approved by moderator
+      added_to_safecast_database: Added to Safecast database
+      map_created: Map created
+    map:
+      loading_html: "Loading map&hellip;"
+      captured_at:
+      latitude: Latitude
+      longitude: Longitude
+      cpm: CPM
